@@ -89,6 +89,7 @@ class PhpunitTestCommand(sublime_plugin.WindowCommand):
             self.lastTestCommand = command
             os.system(osascript_command)
         elif 'Windows' == platform.system():
+            self.lastTestCommand = command
             os.system(command)
 
 class RunPhpunitTestCommand(PhpunitTestCommand):
